@@ -3,12 +3,13 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID",
+    apiKey: "AIzaSyCUrL4JbNEfaElTrYTPmc1Lq_6o7mU1yt0",
+    authDomain: "dinoworldcoin.firebaseapp.com",
+    projectId: "dinoworldcoin",
+    storageBucket: "dinoworldcoin.firebasestorage.app",
+    messagingSenderId: "515948974888",
+    appId: "1:515948974888:web:1f3ad0bb7dc0b2384df61d",
+    measurementId: "G-SVFEE8QV36"
 };
 
 const app = initializeApp(firebaseConfig);

@@ -2,11 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   experimental: {
-    // Enable only known experimental options if needed
-    typedRoutes: true, // Example: Enable typed routes (optional)
+    typedRoutes: true, // Retain this if you want typed routes
   },
-  // If using the App Directory, no need for `pageExtensions`
-  pageExtensions: ["tsx", "ts"],
+  pageExtensions: ["tsx", "ts"], // Matches your file extensions
 };
 
 export default nextConfig;
