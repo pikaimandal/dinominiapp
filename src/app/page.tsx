@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { MiniKit, VerificationLevel } from '@worldcoin/minikit-js'; // Import VerificationLevel enum
+import { MiniKit, VerificationLevel } from '@worldcoin/minikit-js';
 import { db } from '@/lib/firebase';
 import { doc, setDoc } from 'firebase/firestore';
 
@@ -10,9 +10,9 @@ const VerifyPage = () => {
     const [loading, setLoading] = useState(false);
     const [isClient, setIsClient] = useState(false);
 
-    // Ensure that client-only logic runs after the first render
     useEffect(() => {
         setIsClient(true);
+        console.log('Is Worldcoin app installed?', MiniKit.isInstalled()); // Debugging log
     }, []);
 
     const handleVerify = async () => {
@@ -24,7 +24,6 @@ const VerifyPage = () => {
         setLoading(true);
 
         try {
-            // Use the VerificationLevel enum instead of a plain string
             const verifyPayload = {
                 action: "dino",  // Your action ID
                 signal: "world-id",
@@ -55,7 +54,6 @@ const VerifyPage = () => {
     };
 
     if (!isClient) {
-        // Delay rendering client-side logic until after hydration
         return <div>Loading...</div>;
     }
 
